@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qettery - новый музыкальный клиент</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="shortcut icon" href="media/images/qettery-mini.png" sizes="192x192">
+</head>
+<body>
+    
+    <nav class="head">
+        <a class="no-mrg30" href="index.html"><img src="media/images/qettery.png" alt=""></a>
+        <a href="about.html">о нас</a>
+        <a href="activate-client.html">клиент</a>
+    </nav>
+
+    <div class="hl one">
+        <span class="text-one"><b>Новый</b> музыкальный клиент для вашего ПК!</span> <br>
+        <span class="text-two">а так же веб-версия под все устройства</span> <br>
+        <a href="activate-client.html"><button class="btn">Активировать в этом браузере!</button></a>
+    </div>
+
+    <div class="hl two">
+        <span>Почему Qettery - лучший способ прослушивания музыки?</span> <br>
+        <p>
+            1. Всё бесплатно, без рекламы и каких-либо ограничений. <br>
+            2. Простой, лёгкий плеер. <br>
+            3. Вся музыка в одном месте.
+        </p>
+        <a href="about.html"><button class="btn">Подробнее о Qettery</button></a>
+    </div>
+
+    <div class="hl three">
+        <span>Начните использовать Qettery прямо сейчас!</span> <br>
+        <a href="activate-client.html"><button class="btn">Ок!</button></a>
+    </div>
+
+    <div class="hl footer">
+        <img src="media/images/qettery.png" alt=""> <span id="year">year</span>
+    </div>
+
+    <script>
+        var year = new Date().getFullYear();
+        var year_obj = document.getElementById('year');
+        year_obj.innerHTML = year;
+    </script>
+
+</body>
+</html>
