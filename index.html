@@ -6,38 +6,55 @@
     <title>Qettery - новый музыкальный клиент</title>
     <link rel="stylesheet" href="style/index.css">
     <link rel="shortcut icon" href="media/images/qettery-mini.png" sizes="192x192">
+    <script src="media/fontawesome/js/all.js"></script>
 </head>
 <body>
     
     <nav class="head">
         <a class="no-mrg30" href="index.html"><img src="media/images/qettery.png" alt=""></a>
         <a href="about.html">о нас</a>
-        <a href="activate-client.html">клиент</a>
+        <a href="client.html">клиент</a>
     </nav>
 
     <div class="hl one">
-        <span class="text-one"><b>Новый</b> музыкальный клиент для вашего ПК!</span> <br>
-        <span class="text-two">а так же веб-версия под все устройства</span> <br>
-        <a href="activate-client.html"><button class="btn">Активировать в этом браузере!</button></a>
+        <div class="block">
+
+            <p class="text-one">Музыкальный клиент для <br> прослушивания музыки</p>
+            <p class="text-two">Вам больше не нужно платить деньги за музыку</p>
+            <button onclick="document.location.href = 'client.html'" class="btn goit">Я хочу это использовать!</button> <button onclick="document.location.href = 'about.html'" class="btn about">Подробнее</button>
+
+            <i class="fas fa-music left-bottom"></i>
+            <i class="fas fa-music right-top"></i>
+            <i class="fas fa-headphones-alt right-bottom"></i>
+            <i class="fas fa-headphones-alt left-top"></i>
+
+        </div>
     </div>
 
     <div class="hl two">
-        <span>Почему Qettery - лучший способ прослушивания музыки?</span> <br>
-        <p>
-            1. Всё бесплатно, без рекламы и каких-либо ограничений. <br>
-            2. Простой, лёгкий плеер. <br>
-            3. Вся музыка в одном месте.
+        <span>Почему стоит <br> использовать Qettery?</span> <br>
+        <p class="about-text top">
+            1. Всё бесплатно, без ограничений. 
+            <p class="mini-about">Ну, тут объяснять, в принцпе, не надо.</p>
         </p>
-        <a href="about.html"><button class="btn">Подробнее о Qettery</button></a>
+
+        <p class="about-text">
+            2. Удобный плеер.
+            <p class="mini-about">В виде компактного блока по центру.</p>
+        </p>
+
+        <p class="about-text">
+            3. Без рекламы.
+            <p class="mini-about">Было бы очень не прилично ставить рекламу в такой проект.</p>
+        </p>
+
+        <a href="about.html"><button class="btn about">Подробнее</button></a>
+        <a class="mrgl-30" href="client.html"><button class="btn goit">Скачать клиент!</button></a>
+
     </div>
 
-    <div class="hl three">
-        <span>Начните использовать Qettery прямо сейчас!</span> <br>
-        <a href="activate-client.html"><button class="btn">Ок!</button></a>
-    </div>
-
-    <div class="hl footer">
-        <img src="media/images/qettery.png" alt=""> <span id="year">year</span>
+    <div class="footer">
+        <img src="media/images/qettery.png" alt=""> <span>© David Agaev (darvigdsd), <span id="year">year</span></span>
     </div>
 
     <script>

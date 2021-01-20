@@ -13,32 +13,31 @@
     <nav class="head">
         <a class="no-mrg30" href="index.html"><img src="media/images/qettery.png" alt=""></a>
         <a style="text-decoration: underline;" href="about.html">о нас</a>
-        <a href="activate-client.html">клиент</a>
+        <a href="client.html">клиент</a>
     </nav>
 
     <div class="about">
+
         <span>О <span>Qettery</span></span>
         <p>
-            Qettery - новый музыкальный клиент для ПК и веб. <br>
-            Суть этого набора различных скриптов в том, что вы можете слушать музыку абсолютно бесплатно, без рекламы и каких-либо ограничений. <br>
-            Это работает вот таким образом: <br>
-            Берётся информация с музыкальных сервисов на подобии название/автор/путь к аудиофайлу, далее это отоброжается у вас. Именно на сервере Qettery ничего из вышеперечисленного не хранит. <br>
-            Сделано с любовью <img src="media/images/emoji/red-heart.png" alt="">. <br> <br>
+            Qettery - музыкальный клиент для ПК и веб. <br>
+            Суть этого клиента понятна и так, но про то, как он работает, сейчас будет рассказано подробнее. <br>
+            <br>
+            Клиент собирает музыку из хранилища, которое имеет право использовать эту музыку, тем самым не нарушая авторские права. <br>
+            Как по мне, довольно удобный, но есть ещё куда расти. <br>
+            <br> 
+            Версия клиента на данный момент: <label id="version">версия</label>. <br>
+            <br>
             Контакты с создателем: <br>
-            <a target="_blank" href="https://vk.com/darvigdsd">vk</a>, <a target="_blank" href="https://t.me/darvigdsd">telegram</a>
+            <a href="https://vk.com/darvigdsd" target="_blank">vk</a>, <a href="https://t.me/darvigdsd" target="_blank">telegram</a> 
         </p>
-
-        <div class="screenq">
-            <span>Если вам и этого мало</span>
-            <p>
-                То вот, дизайн Qettery:
-            </p>
-            <img src="media/images/qettery screen.PNG" alt="">
-        </div>
 
     </div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#version").load("http://darvigdsd.github.io/qettery/updates/updates.html");
+    </script>
 
 </body>
 </html>

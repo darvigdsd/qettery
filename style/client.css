@@ -1,0 +1,130 @@
+
+body {
+    background: #0B171D;
+}
+
+.clientbtns {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 75px;
+}
+
+.clientbtns .text-one {
+    font-size: 70px;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.clientbtns .text-two {
+    font-size: 40px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+.clientbtns .mini-data {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.clientbtns .btn.available {
+    background: white;
+    color: #030A0D;
+    margin-top: 50px;
+}
+.clientbtns .btn.none {
+    background: white;
+    color: #030A0D;
+    opacity: 0.50;
+    margin-top: 35px;
+}
+
+.client {
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 75px 40px 75px 40px;
+}
+
+.client img {
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0px 3px 40px rgb(255, 135, 161, 0.35));
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+@media (max-width: 1550px) {
+
+    .clientbtns {
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin-left: 0;
+    } 
+
+    .client {
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 75px 40px 75px 40px;
+    }
+    
+    .client img {
+        display: none;
+    } 
+
+    @media (max-width: 500px) {
+        .clientbtns {
+            width: auto;
+            height: auto;
+            text-align: center;
+            margin-left: 0;
+        }
+        
+        .clientbtns .text-one {
+            font-size: 45px;
+            color: white;
+            font-family: 'Montserrat';
+            font-weight: 700;
+        }
+        .clientbtns .text-two {
+            font-size: 30px;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            color: white;
+            margin-top: 35px;
+            margin-bottom: 0;
+        }
+        .clientbtns .public-data {
+            font-size: 25px;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            color: white;
+            margin-top: 35px;
+            margin-bottom: 0;
+        }
+        
+        .clientbtns .btn.one {
+            background: white;
+            color: #030A0D;
+            margin-top: 50px;
+        }
+        .clientbtns .btn.none {
+            background: white;
+            color: #030A0D;
+            opacity: 0.50;
+            margin-top: 35px;
+        }  
+    }
+}

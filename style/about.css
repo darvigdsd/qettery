@@ -23,6 +23,9 @@
     margin-top: 60px;
     font-family: 'Montserrat';
 }
+.about #version {
+    color: #EF738D;
+}
 
 .about p img {
     height: 2.5ch;
