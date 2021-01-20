@@ -85,6 +85,13 @@ body {
     } 
 
     @media (max-width: 500px) {
+        .client {
+            width: auto;
+            height: auto;
+            text-align: center;
+            padding: 40px 0px;
+        }
+
         .clientbtns {
             width: auto;
             height: auto;
@@ -126,5 +133,57 @@ body {
             opacity: 0.50;
             margin-top: 35px;
         }  
+        @media (max-width: 350px) {
+            .client {
+                width: auto;
+                height: auto;
+                text-align: center;
+                padding: 40px 0px;
+            }
+    
+            .clientbtns {
+                width: auto;
+                height: auto;
+                text-align: center;
+                margin-left: 0;
+            }
+            
+            .clientbtns .text-one {
+                font-size: 35px;
+                color: white;
+                font-family: 'Montserrat';
+                font-weight: 700;
+            }
+            .clientbtns .text-two {
+                font-size: 30px;
+                font-family: 'Montserrat';
+                font-weight: 700;
+                color: white;
+                margin-top: 35px;
+                margin-bottom: 0;
+            }
+            .clientbtns .public-data {
+                font-size: 25px;
+                font-family: 'Montserrat';
+                font-weight: 700;
+                color: white;
+                margin-top: 35px;
+                margin-bottom: 0;
+            }
+            
+            .clientbtns .btn.available {
+                background: white;
+                font-size: 20px;
+                color: #030A0D;
+                margin-top: 35px;
+            }
+            .clientbtns .btn.none {
+                background: white;
+                color: #030A0D;
+                font-size: 20px;
+                opacity: 0.50;
+                margin-top: 35px;
+            } 
+        }
     }
 }
