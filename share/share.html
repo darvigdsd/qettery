@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qettery - клиент</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="shortcut icon" href="../media/images/qettery-mini.png" sizes="64x64">
+    <link rel="stylesheet" href="../style/activate-client.css">
+    <link rel="stylesheet" href="share.css">
+    
+    <script src="../media/fontawesome/js/all.js"></script>
+
+</head>
+<body>
+    
+    <nav class="head">
+        <a class="no-mrg30" href="../index.html"><img src="../media/images/qettery.png" alt=""></a>
+    </nav>
+
+    <div class="player">
+
+        <div class="music">
+            <!-- <span class="musictitle"><span style='color: #FFBAC6;'>Кто-то</span> <span style='color: white;'> - Где-то </span></span> -->
+
+            <span class="musicname"> <span id="author" style='color: #FFBAC6;'>Кто-то</span> - <span id="musicname">Музыка</span> </span>
+            
+            <button onmouseout='this.parentElement.style.background = "#171D60"; this.style.boxShadow = "0px 5pt 10pt rgb(193, 19, 60, 0.15)"; this.parentElement.style.boxShadow = "0px 5px 15px rgb(9, 13, 44, 0.20)";' onmouseover='this.parentElement.style.background = "#E63757"; this.style.boxShadow = "0px 5px 10px rgb(9, 13, 44, 0.20)"; this.parentElement.style.boxShadow = "0px 5pt 15pt rgb(193, 19, 60, 0.20)";' class="btn play">
+                <i class="fas fa-play"></i>
+            </button>
+
+            <audio loop id="audio" src=""></audio>
+
+        </div>
+
+        <div class="progress">
+            <div class="time">
+
+            </div>
+        </div>
+
+        <div class="etccontrols">
+        <button class="btn control volume">
+            <i class="icon fas fa-volume-up"></i>
+            <span id="volume">0</span>
+        </button>
+
+        <button id="share" class="btn share">
+            <i class="fa fa-share"></i>
+        </button>
+        </div>
+
+
+
+    </div>
+
+        <div class="getfull">
+            <a href="https://darvigdsd.github.io/qettery/client" target="_blank"><button class="btn full">
+                А в клиенте слушать ещё удобнее...
+            </button></a>
+        </div>
+
+    <script src="../media/pidcrypt/pidcrypt_util.js"></script>
+    <script src="../media/base64/base64.js"></script>
+    <script src="share.js"></script>
+    <script src="mini-player.js"></script>
+    <script src="shifr.js"></script>
+
+</body>
+</html>

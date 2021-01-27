@@ -1,0 +1,217 @@
+
+
+.music-i {
+    display: block;
+    text-align: center;
+}
+
+.music {
+    font-size: 35px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+    background: #171D60;
+    padding: 25px 40px;
+    vertical-align: middle;
+    border-radius: 40px;
+    box-shadow: 0px 3px 15px rgb(9, 13, 44, 0.20);
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 45px;
+    position: relative;
+    text-align: center;
+    transition: 0.5s all;
+}
+.music span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.music .btn {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+    background: #E63757;
+    padding: 10px 30px;
+    border-radius: 20pt;
+    border: none;
+    box-shadow: 0px 5pt 10pt rgb(193, 19, 60, 0.15);
+    margin-left: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* mini-player */
+
+
+/* импорт */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css');
+
+/*  */
+
+/* сам плеер */
+
+.player {
+    position: fixed;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    display: inline-block;
+    visibility: visible;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*  */
+
+/* время */
+
+.progress {
+    width: 174px;
+    height: 3px;
+    background: #f5f5f5;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 0px;
+    visibility: visible;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.progress .time {
+    width: 0%;
+    height: 3px;
+    background: #ACD652;
+    border-radius: 10px;
+}
+
+/*  */
+
+/* названия */
+
+.musicname {
+    font-size: 35px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    width: 175px;
+    height: auto;
+    display: inline-block;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+/*  */
+
+/* громкость */
+
+.player .btn.control {
+    position: relative;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    border: none;
+    border-radius: 20pt;
+    padding: 10px 30px;
+    box-shadow: 0px 5pt 10pt rgba(2, 9, 17, 0.15);
+    color: #0b1118;
+    background: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn.control #volume {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 15px;
+}
+/* .btn.control:hover #volume {
+    display: inline-block;
+    font-size: 20px;
+} */
+
+.btn.control .icon {
+    display: inline-block;
+    font-size: 20px;
+}
+/* .btn.control:hover .icon {
+    display: none;
+    font-size: 20px;
+} */
+
+/*  */
+
+/* кнопка "поделиться" */
+
+.btn.share {
+    padding: 5pt 7pt;
+    background: #52F2B1;
+    font-size: 10pt;
+    color: white;
+    box-shadow: 0px 3px 6px rgba(82, 242, 177, 0.16);
+    border-radius: 20pt;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+/*  */
+
+/* "другие" кнопки */
+
+.etccontrols {
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*  */
+
+/*  */
+
+.getfull {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    animation: hoba 2s linear;
+}
+
+@keyframes hoba {
+    from {
+        bottom: -50%;
+    }
+    to {
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .btn.play {
+        margin-left: 0;
+    }
+
+    @media (max-width: 700px) {
+        .getfull {
+            visibility: hidden;   
+        } 
+    }
+}
+
+@media (max-height: 500px) {
+    .player {
+        position: relative;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%);
+        margin-bottom: 30px;
+    }
+    .getfull {
+        visibility: hidden;
+    }
+}
