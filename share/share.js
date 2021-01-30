@@ -14,7 +14,7 @@ function getUrl() {
 
     // var urlVar2 = Base64.decode(urlVar.slice(1));
 
-    var urlVar2 = b64_to_utf8(urlVar.slice(1));
+    var urlVar2 = b64_to_utf8(urlVar);
 
     var arrayVar = []; // массив для хранения переменных
     var valueAndKey = []; // массив для временного хранения значения и имени переменной
