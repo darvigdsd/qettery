@@ -10,7 +10,7 @@ function b64_to_utf8(str) {
 function getUrl() {
     var urlVar = window.location.search; // получаем параметры из урла
 
-    var urlVar2 = b64_to_utf8(urlVar); //.slice(1)
+    var urlVar2 = b64_to_utf8(urlVar.slice(1));
 
     var arrayVar = []; // массив для хранения переменных
     var valueAndKey = []; // массив для временного хранения значения и имени переменной
