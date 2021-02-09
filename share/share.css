@@ -122,19 +122,11 @@
     font-size: 20px;
     margin-left: 15px;
 }
-/* .btn.control:hover #volume {
-    display: inline-block;
-    font-size: 20px;
-} */
 
 .btn.control .icon {
     display: inline-block;
     font-size: 20px;
 }
-/* .btn.control:hover .icon {
-    display: none;
-    font-size: 20px;
-} */
 
 /*  */
 
