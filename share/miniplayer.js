@@ -135,7 +135,7 @@ document.body.addEventListener("keydown", function(event) {
 
 // audiojs
 
-if (/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
     document.querySelector('.audiojs .play-pause').style.display = 'inline-block';
     document.querySelector('.btn.play').style.display = 'none';
