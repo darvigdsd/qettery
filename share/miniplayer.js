@@ -137,9 +137,10 @@ document.body.addEventListener("keydown", function(event) {
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
+    document.querySelector('.audiojs').style.display = 'inline-block';
     document.querySelector('.audiojs .play-pause').style.display = 'inline-block';
     document.querySelector('.btn.play').style.display = 'none';
-    document.querySelector('.btn.control.volume').style.display = 'none';
+    document.getElementsByClassName('volume')[0].style.display = 'none';
 
     setInterval(function() {
 

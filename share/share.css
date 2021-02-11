@@ -208,7 +208,7 @@
     visibility: hidden;
     width: auto;
     height: auto;
-    display: inline-block;
+    display: none;
     vertical-align: middle;
 }
 .audiojs .scrubber {
