@@ -2,26 +2,51 @@
 .about {
     position: relative;
     margin: 0 auto;
-    padding: 75px 40px 75px 40px;
-    text-align: center;
+    padding: 55px 40px;
+    text-align: left;
     font-size: 55px;
+    color: #020A0E;
+}
+
+.about.one {
+    background: #EBEBEB;
+}
+.about.two {
+    background: #E8E8E8;   
+}
+
+.about.contacts {
+    background: #03131A; 
+    color: white;   
+}
+
+.about.version {
+    background: #020F14;
     color: white;
 }
 
 .about span {
-    font-size: 55px;
+    font-size: 45px;
     font-family: 'Montserrat';
     font-weight: 700;
 }
 .about span span {
-    color: #EF738D;
+    color: #4E94D4;
+}
+
+.about.contacts span span {
+    color: #6EBA6A;
+}
+
+.about.version span span {
+    color: #EA4C4B;
 }
 
 .about p {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 35px;
     margin-top: 60px;
-    font-family: 'Montserrat';
+    font-family: 'Rubik';
 }
 .about #version {
     color: #EF738D;
@@ -35,10 +60,12 @@
     user-select: none;
 }
 
-.about p a {
+.about.contacts a {
     font-size: 35px;
+    font-family: 'Montserrat';
     color: #2f4ba5;  
     text-decoration: none;
+    font-weight: 700;
 }
 
 .about .screenq {
@@ -70,14 +97,9 @@
             font-family: 'Montserrat';
             font-weight: 700;
         }
-        .about span span {
-            color: #EF738D;
-        }
-        
+
         .about p {
-            font-weight: 700;
-            font-size: 25px;
-            margin-top: 60px;
+            font-size: 30px;
         }
         
         .about p img {

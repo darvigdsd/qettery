@@ -105,6 +105,9 @@ body {
     font-family: 'Rubik';
     font-weight: 500;
     margin-left: 30px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 .hl.one .block .btn.about:hover {
     padding: 25px 35px;
@@ -191,6 +194,9 @@ body {
     font-size: 25px;
     font-family: 'Rubik';
     font-weight: 500;
+    border: 2px solid white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 .hl.two a.mrgl-30 {
     margin-left: 30px;

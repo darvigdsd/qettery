@@ -35,16 +35,22 @@ body {
     margin-bottom: 0;
 }
 
-.clientbtns .btn.available {
+.clientbtns .btn {
+    font-size: 30px;
+    padding: 15px 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clientbtns .btn.windows {
     background: white;
     color: #030A0D;
-    margin-top: 50px;
 }
-.clientbtns .btn.none {
+.clientbtns .btn.apple {
     background: white;
     color: #030A0D;
     opacity: 0.50;
-    margin-top: 35px;
+    margin-left: 15px;
 }
 
 .client {
