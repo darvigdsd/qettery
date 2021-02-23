@@ -1,5 +1,5 @@
 
-var data = []; // массив для хранения переменных
+var data = [];
 
 function b64_to_utf8(str) {
 
@@ -8,19 +8,19 @@ function b64_to_utf8(str) {
 }
 
 function getUrl() {
-    var urlVar = window.location.search; // получаем параметры из урла
 
-    var urlVar2 = b64_to_utf8(urlVar.slice(1));
+    var url = window.location.search;
+    console.log(url);
+    var urlVar = new URL(`https://darvigdsd.github.io/qettery/share/share${b64_to_utf8(url.slice(1))}`);
 
-    var arrayVar = []; // массив для хранения переменных
-    var valueAndKey = []; // массив для временного хранения значения и имени переменной
-    arrayVar = (urlVar2.substr(1)).split('&'); // разбираем урл на параметры
-    if(arrayVar[0]=="") return false; // если нет переменных в урле
-    for (i = 0; i < arrayVar.length; i ++) { // перебираем все переменные из урла
-        valueAndKey = arrayVar[i].split('='); // пишем в массив имя переменной и ее значение
-        data[valueAndKey[0]] = valueAndKey[1]; // пишем в итоговый массив имя переменной и ее значение
-    }
-    return data; // возвращаем результат
+    console.log(urlVar);
+
+    data.name = urlVar.searchParams.get('name');
+    data.author = urlVar.searchParams.get('author');
+    data.href = urlVar.searchParams.get('href');
+
+    return data;
+
 }
 
 getUrl();
@@ -31,6 +31,7 @@ document.getElementById('musicname').innerText = data.name;
 audio.src = data.href;
 
 document.getElementById('share').onclick = function copyShareUrl() {
+
     var url = document.createElement('input'),
     text = window.location.href;
     document.body.appendChild(url);
