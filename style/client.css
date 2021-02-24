@@ -4,6 +4,7 @@ body {
 }
 
 .clientbtns {
+    position: relative;
     display: inline-block;
     width: auto;
     height: auto;
@@ -13,6 +14,7 @@ body {
 }
 
 .clientbtns .text-one {
+    position: relative;
     font-size: 70px;
     color: white;
     font-family: 'Montserrat';
@@ -58,6 +60,7 @@ body {
     height: auto;
     text-align: center;
     padding: 75px 40px 75px 40px;
+    position: relative;
 }
 
 .client img {
@@ -70,7 +73,11 @@ body {
     -webkit-user-select: none;
 }
 
-@media (max-width: 1550px) {
+.client img.before {
+    display: none;
+}
+
+@media (max-width: 1700px) {
 
     .clientbtns {
         width: auto;
@@ -86,6 +93,18 @@ body {
         padding: 75px 40px 75px 40px;
     }
     
+    .clientbtns .text-one img.before {
+        position: absolute;
+        display: inline-block;
+        height: 25px;
+        top: -10px;
+        left: -5px;
+        filter: drop-shadow(0px 3px 20px rgb(255, 135, 161, 1));
+        pointer-events: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
     .client img {
         display: none;
     } 
