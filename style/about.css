@@ -21,7 +21,8 @@
 }
 
 .about.version {
-    background: #020F14;
+    /* background: #020F14; */
+    background: #03131A; 
     color: white;
 }
 

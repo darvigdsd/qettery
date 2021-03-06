@@ -52,7 +52,7 @@ body {
 }
 
 .hl.one {
-    background: #CBCBCB;
+    background: #DADADA;
     text-align: center;
     font-size: 55px;
 }
@@ -180,7 +180,7 @@ body {
 .hl.two .btn.about {
     padding: 25px 35px;
     background: white;
-    color: #0C151B;
+    color: #0C111B;
     border-radius: 25px;
     font-size: 25px;
     font-family: 'Rubik';
@@ -204,7 +204,7 @@ body {
 .hl.two .btn.goit:hover {
     padding: 25px 35px;
     background: white;
-    color: #0C151B;
+    color: #0C111B;
     border-radius: 25px;
     font-size: 25px;
     font-family: 'Rubik';
@@ -414,26 +414,22 @@ body {
                 }
     
                 .hl.one .block .btn.goit {
-                    padding: 25px 35px;
-                    font-size: 20px;
-                    display: block;
+                    font-size: 15px;
+                    display: inline-block;
                     position: relative;
                     margin: 0 auto;
                 }
     
                 .hl.one .block .btn.about {
-                    font-size: 20px;
-                    margin-top: 15px;
+                    font-size: 15px;
                     margin-left: 0;
                 }
                 .hl.one .block .btn.about:hover {
-                    font-size: 20px;
-                    margin-top: 15px;
+                    font-size: 15px;
                     margin-left: 0;
                 } 
 
                 .hl.two {
-                    background: #0C151B;
                     color: white;
                     font-size: 55px;
                     text-align: center;
@@ -461,10 +457,9 @@ body {
                     margin-left: 0;
                 } 
 
-                @media (max-width: 450px) {
+                @media (max-width: 400px) {
 
                     .hl.two {
-                        background: #0C151B;
                         color: white;
                         font-size: 35px;
                         text-align: center;
@@ -494,15 +489,6 @@ body {
 
                     @media (max-width: 340px) {
 
-                        .hl.one {
-                            padding: 10px;
-                        }
-    
-                        .hl.one .block {
-                            padding: 30px 40px;
-                            width: 100%;
-                        }
-                
                         .hl.one .block .text-one {
                             font-size: 25px;
                             font-family: 'Rubik';
@@ -520,34 +506,31 @@ body {
                         }
             
                         .hl.one .block .btn.goit {
-                            padding: 25px 35px;
-                            font-size: 20px;
-                            display: block;
+                            font-size: 15px;
+                            display: inline-block;
                             position: relative;
                             margin: 0 auto;
                         }
             
                         .hl.one .block .btn.about {
-                            font-size: 20px;
-                            margin-top: 15px;
+                            font-size: 15px;
                             margin-left: 0;
                         }
                         .hl.one .block .btn.about:hover {
-                            font-size: 20px;
-                            margin-top: 15px;
+                            font-size: 15px;
                             margin-left: 0;
                         }
                         
-                        .hl.one .block .btn.about {
-                            font-size: 20px;
-                            margin-top: 15px;
-                            margin-left: 0;
+                        .hl.two .btn.about {
+                            font-size: 15px;
                         }
-                        .hl.one .block .btn.about:hover {
-                            font-size: 20px;
-                            margin-top: 15px;
-                            margin-left: 0;
-                        } 
+
+                        .hl.two .btn.goit {
+                            font-size: 15px;
+                        }
+                        .hl.two .btn.goit:hover {
+                            font-size: 15px;
+                        }
     
                     }
 
