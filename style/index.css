@@ -1,7 +1,11 @@
 
-@import '../media/Bootstrap/css/bootstrap.css';
+@import url('https://darvigdsd.github.io/media/Bootstrap/css/bootstrap.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    cursor: default;
+}
 
 body, head {
     margin: 0;
@@ -10,7 +14,7 @@ body, head {
 }
 
 body {
-    background: #020A0E;
+    background: #00030F;
 }
 
 .head {
@@ -19,7 +23,7 @@ body {
     font-weight: 700;
     color: white;
     padding: 40px;
-    background: #061318;
+    background: #010313;
 }
 .head img {
     display: inline-block;
@@ -29,192 +33,217 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
 }
-.head a {
+
+.freeMusicPortal {
+    width: auto;
+    height: auto;
+    padding: 50px 20px;
+    background: #ED2E55;
+    text-align: center;
+}
+
+.freeMusicPortal span {
+    font-size: 50px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+}
+.freeMusicPortal p {
+    font-size: 25px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    color: white;
+    opacity: 0.7;
+    margin: 0;
+}
+
+
+.clientAbout {
+    width: auto;
+    height: auto;
+    background: #000017;
+    color: white;
+    padding: 50px 10px;
+    text-align: center;
+}
+.clientAbout span.title {
+    font-size: 50px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #B2B2FF;
+    margin: 0;
+}
+.clientAbout span {
+    font-size: 40px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+    display: block;
+}
+.clientAbout span span {
+    display: inline-block;
+    margin: 0;
+}
+.clientAbout p {
+    font-size: 25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #3440AB;
+    margin: 0;
+}
+
+
+.popularFuncs {
+    width: auto;
+    height: auto;
+    background: #E8F0FF;
     font-size: 30px;
     font-family: 'Montserrat';
     font-weight: 700;
-    color: white;   
-    text-decoration: none;
-    margin-left: 50px;
-}
-.head a.no-mrg30 {
-    margin-left: 0;
+    color: #000017;
+    padding: 50px 10px;
+    text-align: center;
 }
 
-.hl {
+.popularFunc {
     width: auto;
     height: auto;
-    font-size: 55px;
+    padding: 50px 10px;
+    background: white;
+    text-align: center;
+}
+.popularFunc span {
+    font-size: 50px;
     font-family: 'Montserrat';
     font-weight: 700;
-    color: white;
-    padding: 60px 40px;
+    color: black;
+}
+.popularFunc p {
+    font-size: 35px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #010313;
+    margin: 0;
+    margin-top: 10px;
+}
+.popularFunc p span {
+    font-size: 35px;
 }
 
-.hl.one {
-    background: #DADADA;
-    text-align: center;
-    font-size: 55px;
+.popularFunc img {
+    height: 515px;
+    border-radius: 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    pointer-events: none;
+    margin-top: 10px;
 }
 
 
-.hl.one .block {    
-    display: inline-block;
-    padding: 60px 70px;
-    background: #ED2E55;
+.popularFunc.offline {
+    background: #E9FFF0;
+}
+.popularFunc.offline span {
+    color: #BEFFD3;
+}
+.popularFunc.offline p span {
+    color: #BEFFD3;
+}
+
+.popularFunc.share {
+    background: #E9F4FF;
+}
+.popularFunc.share span {
+    color: #BEE8FF;   
+}
+.popularFunc.share p span {
+    color: #BEE8FF;
+}
+.popularFunc.share p span.notavailable {
+    color: #010313;
+    opacity: 0.2;
+}
+
+.download {
+    width: auto;
+    height: auto;
+    padding: 50px 10px;
+    background: #030322;
     color: white;
-    font-size: 20px;
-    font-family: 'Rubik';
-    box-shadow: 0px 5px 20px rgba(237, 46, 85, 0.25);
-    border-radius: 60px;
     text-align: center;
     position: relative;
 }
-
-.hl.one .block .text-one {
+.download::after {
+    content: '';
+    width: 220px;
+    height: 240px;
+    background-image: url('../media/images/qettery-mini.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(-50% - -25%);
+    right: 40px;
+    filter: drop-shadow(0px 3px 20px rgba(255, 135, 162, 0.5));
+}
+.download span {
     font-size: 50px;
-    font-family: 'Rubik';
-    font-weight: 700;
-    margin-bottom: 0;
-}
-.hl.one .block .text-two {
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 400;
-    color: white;
-    opacity: 0.70;
-    margin-top: 28px;
-    margin-bottom: 28px;
-}
-
-.hl.one .block .btn.goit {
-    padding: 25px 35px;
-    background: white;
-    color: #ED2E55;
-    border-radius: 25px;
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 500;
-}
-.hl.one .block .btn.about {
-    padding: 25px 35px;
-    background: #ED2E55;
-    color: white;
-    border-radius: 25px;
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 500;
-    margin-left: 30px;
-    border: 2px solid white;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-.hl.one .block .btn.about:hover {
-    padding: 25px 35px;
-    background: white;
-    color: #ED2E55;
-    border-radius: 25px;
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 500;
-    margin-left: 30px;
-}
-
-.hl.one .block .left-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 35px;
-}
-.hl.one .block .right-top {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 35px;
-}
-.hl.one .block .right-bottom {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 35px;
-}
-.hl.one .block .left-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 35px;
-}
-
-.hl.two {
-    background: #0C111B;
-    color: white;
-    font-size: 55px;
-    text-align: center;
-}
-.hl.two span {
-    font-size: 55px;
     font-family: 'Montserrat';
     font-weight: 700;
+    color: white;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+.download button {
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 15px 45px;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: white;
+    background: #ED2E55;
+    box-shadow: 0px 3px 15px rgba(237, 46, 85, 0.25);
+    border-radius: 45pt;
+    margin-top: 25px;
+}
+.download button * {
+    cursor: pointer;
+}
+.download button.notavailable {
+    opacity: 0.5;
+}
+.download button.web {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.download button.apple {
+    margin-left: 25px;
 }
 
-.hl.two .about-text.top {
-    margin-top: 60px;
-}
-.hl.two .about-text {
-    font-size: 45px;
-    font-family: 'Rubik';
+.download span.version {
+    font-size: 25px;
+    font-family: 'Montserrat';
     font-weight: 700;
-    margin-top: 25px;
-    color: #EAEAEA;
-    margin-bottom: 0;
-}
-.hl.two .mini-about {
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 400;
-    color: #EAEAEA;
-    opacity: 0.70;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-.hl.two .btn.about {
-    padding: 25px 35px;
-    background: white;
-    color: #0C111B;
-    border-radius: 25px;
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 500;
-}
-.hl.two .btn.goit {
-    padding: 25px 35px;
-    background: #0C111B;
     color: white;
-    border-radius: 25px;
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 500;
-    border: 2px solid white;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    margin-top: 25px;
 }
-.hl.two a.mrgl-30 {
-    margin-left: 30px;
-} 
-.hl.two .btn.goit:hover {
-    padding: 25px 35px;
-    background: white;
-    color: #0C111B;
-    border-radius: 25px;
+.download span#version {
+    display: inline-block;
     font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 500;
+    color: #ED2E55;
 }
 
 .footer {
     padding: 40px;
     font-size: 35px;
-    background: #061318;
+    background: #010313;
 }
 .footer img {
     display: inline-block;
@@ -235,339 +264,69 @@ body {
     margin-left: 0;
 }
 
-.btn {
-    padding: 25px 35px;
-    background: white;
-    color: #0C151B;
-    border-radius: 25px;
-    font-size: 25px;
-    font-family: 'Rubik';
-    font-weight: 500;
-}
-
-@media (max-width: 1000px) {
-    .head {
-        font-size: 30px;
-        font-family: 'Montserrat';
-        font-weight: 700;
-        color: white;
-        padding: 40px;
-        text-align: center;
-    }
-    .head img {
-        display: block;
-        height: 56px;
-        margin: auto;
-        pointer-events: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-    }
-    .head a {
-        font-size: 30px;
-        font-family: 'Montserrat';
-        font-weight: 700;
-        color: white;   
-        text-decoration: none;
-        margin-left: 0;
-    }
-
-    .footer img {
-        display: inline-block;
-        height: 56px;
-        pointer-events: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-    }
-    
-    @media (max-width: 900px) {
-
-        .hl.one .block {
-            width: 100%;
-        }
-
-        .hl.one .block .text-one {
-            font-size: 35px;
-            font-family: 'Rubik';
-            font-weight: 700;
-            margin-bottom: 0;
-        }
-        .hl.one .block .text-two {
-            font-size: 20px;
-            font-family: 'Rubik';
-            font-weight: 400;
-            color: white;
-            opacity: 0.70;
-            margin-top: 28px;
-            margin-bottom: 28px;
-        }
-        
-        .hl.one .block .btn.goit {
-            padding: 25px 35px;
-            background: white;
-            color: #ED2E55;
-            border-radius: 25px;
-            font-size: 25px;
-            font-family: 'Rubik';
-            font-weight: 500;
-            display: block;
-            position: relative;
-            margin: 0 auto;
-        }
-        .hl.one .block .btn.about {
-            margin-top: 15px;
-            margin-left: 0;
-        }
-        .hl.one .block .btn.about:hover {
-            margin-top: 15px;
-            margin-left: 0;
-        }   
-        
-        
-        
-        @media (max-width: 700px) {
-
-            .hl.one .block {
-                padding: 50px 60px;
-            }
-    
-            .hl.one .block .text-one {
-                font-size: 25px;
-                font-family: 'Rubik';
-                font-weight: 700;
-                margin-bottom: 0;
-            }
-            .hl.one .block .text-two {
-                font-size: 15px;
-                font-family: 'Rubik';
-                font-weight: 400;
-                color: white;
-                opacity: 0.70;
-                margin-top: 28px;
-                margin-bottom: 28px;
-            }
-
-            .hl.one .block .btn.goit {
-                padding: 25px 35px;
-                background: white;
-                color: #ED2E55;
-                border-radius: 25px;
-                font-size: 20px;
-                font-family: 'Rubik';
-                font-weight: 500;
-                display: block;
-                position: relative;
-                margin: 0 auto;
-            }
-
-            .hl.one .block .btn.about {
-                font-size: 20px;
-                margin-top: 15px;
-                margin-left: 0;
-            }
-            .hl.one .block .btn.about:hover {
-                font-size: 20px;
-                margin-top: 15px;
-                margin-left: 0;
-            } 
-
-            .footer {
-                text-align: center;
-            }
-            .footer.img {
-                display: block;
-            }
-            .footer span {
-                margin-left: 0;
-                font-size: 25px;
-                display: block;
-            }
-            .footer span span {
-                margin-left: 0;
-            }
-            
-            @media (max-width: 500px) {
-
-                .hl.one {
-                    padding: 20px;
-                }
-
-                .hl.one .block {
-                    padding: 30px 40px;
-                }
-        
-                .hl.one .block .text-one {
-                    font-size: 25px;
-                    font-family: 'Rubik';
-                    font-weight: 700;
-                    margin-bottom: 0;
-                }
-                .hl.one .block .text-two {
-                    font-size: 15px;
-                    font-family: 'Rubik';
-                    font-weight: 400;
-                    color: white;
-                    opacity: 0.70;
-                    margin-top: 28px;
-                    margin-bottom: 28px;
-                }
-    
-                .hl.one .block .btn.goit {
-                    font-size: 15px;
-                    display: inline-block;
-                    position: relative;
-                    margin: 0 auto;
-                }
-    
-                .hl.one .block .btn.about {
-                    font-size: 15px;
-                    margin-left: 0;
-                }
-                .hl.one .block .btn.about:hover {
-                    font-size: 15px;
-                    margin-left: 0;
-                } 
-
-                .hl.two {
-                    color: white;
-                    font-size: 55px;
-                    text-align: center;
-                }
-                .hl.two span {
-                    font-size: 45px;
-                    font-family: 'Montserrat';
-                    font-weight: 700;
-                }
-                
-                .hl.two .about-text.top {
-                    margin-top: 60px;
-                }
-                .hl.two .about-text {
-                    font-size: 35px;
-                    margin-bottom: 0;
-                }
-                .hl.two .mini-about {
-                    font-size: 20px;
-                }
-                .hl.two .btn.goit {
-                    margin-top: 20px;
-                }
-                .hl.two a.mrgl-30 {
-                    margin-left: 0;
-                } 
-
-                @media (max-width: 400px) {
-
-                    .hl.two {
-                        color: white;
-                        font-size: 35px;
-                        text-align: center;
-                    }
-                    .hl.two span {
-                        font-size: 35px;
-                        font-family: 'Montserrat';
-                        font-weight: 700;
-                    }
-                    
-                    .hl.two .about-text.top {
-                        margin-top: 60px;
-                    }
-                    .hl.two .about-text {
-                        font-size: 25px;
-                        margin-bottom: 0;
-                    }
-                    .hl.two .mini-about {
-                        font-size: 15px;
-                    }
-                    .hl.two .btn.goit {
-                        margin-top: 20px;
-                    }
-                    .hl.two a.mrgl-30 {
-                        margin-left: 0;
-                    } 
-
-                    @media (max-width: 340px) {
-
-                        .hl.one .block .text-one {
-                            font-size: 25px;
-                            font-family: 'Rubik';
-                            font-weight: 700;
-                            margin-bottom: 0;
-                        }
-                        .hl.one .block .text-two {
-                            font-size: 15px;
-                            font-family: 'Rubik';
-                            font-weight: 400;
-                            color: white;
-                            opacity: 0.70;
-                            margin-top: 28px;
-                            margin-bottom: 28px;
-                        }
-            
-                        .hl.one .block .btn.goit {
-                            font-size: 15px;
-                            display: inline-block;
-                            position: relative;
-                            margin: 0 auto;
-                        }
-            
-                        .hl.one .block .btn.about {
-                            font-size: 15px;
-                            margin-left: 0;
-                        }
-                        .hl.one .block .btn.about:hover {
-                            font-size: 15px;
-                            margin-left: 0;
-                        }
-                        
-                        .hl.two .btn.about {
-                            font-size: 15px;
-                        }
-
-                        .hl.two .btn.goit {
-                            font-size: 15px;
-                        }
-                        .hl.two .btn.goit:hover {
-                            font-size: 15px;
-                        }
-    
-                    }
-
-                }
-
-            }
-
-        }
-    }
-
-}
 
 button:active, button:focus {
     outline: none;
 }
 
-a.active.focus,
-a.active:focus,
-a.focus,
-a:active.focus,
-a:active:focus,
-a:focus,
-button.active.focus,
-button.active:focus,
-button.focus,
-button:active.focus,
-button:active:focus,
-button:focus,
-.btn.active.focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn:active:focus,
-.btn:focus {
-outline: 0;
-outline-color: transparent;
-outline-width: 0;
-outline-style: none;
-box-shadow: 0 0 0 0 rgba(0,123,255,0);
-} 
+@media (max-width: 1300px) {
+    .popularFunc img {
+        height: 300px;
+        border-radius: 20px;
+    }   
+    .download::after {
+        width: 140px;
+        height: 160px;
+        top: calc(-45% - -25%);
+        right: 40px;
+    }
+
+    @media (max-width: 560px) {
+        .head {
+            text-align: center;
+        }
+        .head img {
+            height: 56px;
+        }
+        .footer {
+            text-align: center;
+        }
+        .footer span {
+            margin: 0;
+        }
+        .footer img {
+            position: relative;
+            display: block;
+            height: 56px;
+            margin: 0 auto;
+        }
+    
+        .freeMusicPortal span {
+            font-size: 35px;
+        }
+        .freeMusicPortal p {
+            font-size: 20px;
+        }
+    
+        .clientAbout span {
+            font-size: 30px;
+        }
+        .clientAbout p {
+            font-size: 15px;
+        }
+    
+        .popularFunc img {
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .download::after {
+            width: 40px;
+            height: 60px;
+            top: 0;
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+    
+    }
+}

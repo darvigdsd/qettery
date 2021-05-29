@@ -3,64 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qettery - новый музыкальный клиент</title>
+    <title>Qettery - музыку можно слушать бесплатно</title>
     <link rel="stylesheet" href="style/index.css">
     <link rel="shortcut icon" href="media/images/qettery-mini.png" sizes="192x192">
-    <script src="media/fontawesome/js/all.js"></script>
+    <script src="https://darvigdsd.github.io/media/fontawesome/js/all.js"></script>
 </head>
 <body>
     
-    <nav class="head">
-        <a class="no-mrg30" href="index.html"><img src="media/images/qettery.png" alt=""></a>
-        <a href="about.html">о нас</a>
-        <a href="client.html">клиент</a>
-    </nav>
-
-    <div class="hl one">
-        <div class="block">
-
-            <p class="text-one">Музыкальный клиент для <br> прослушивания музыки</p>
-            <p class="text-two">Вам больше не нужно платить деньги за музыку</p>
-            <button onclick="document.location.href = 'client.html'" class="btn goit">Я хочу это использовать!</button> <button onclick="document.location.href = 'about.html'" class="btn about">Подробнее</button>
-
-            <i class="fas fa-music left-bottom"></i>
-            <i class="fas fa-music right-top"></i>
-            <i class="fas fa-headphones-alt right-bottom"></i>
-            <i class="fas fa-headphones-alt left-top"></i>
-
-        </div>
+    <div class="head">
+        <img src="media/images/qettery.png" alt="">
     </div>
 
-    <div class="hl two">
-        <span>Почему стоит <br> использовать Qettery?</span> <br>
-        <p class="about-text top">
-            1. Всё бесплатно, без ограничений. 
-            <p class="mini-about">Ну, тут объяснять, в принцпе, не надо.</p>
+    <div class="freeMusicPortal">
+        <span>Бесплатный музыкальный клиент</span>  
+        <p>
+            Вам больше не нужно платить деньги за музыку
         </p>
+    </div>
 
-        <p class="about-text">
-            2. Удобный плеер.
-            <p class="mini-about">В виде компактного блока по центру.</p>
+    <div class="clientAbout">
+        <span class="title">
+            Плюсы нашего клиента
+        </span>
+        <span>Прослушивание музыки <span style="color: #FA4B75;">без ограничений</span></span>
+        <p>Даже рекламы нет</p>
+        <span>Замена для тех, кто не хочет <span style="color: #A8FF89;">платить</span> за подписки</span>
+        <p>
+            Если у вас нет лишних денег на подписки, то это может стать решающим плюсом
         </p>
+    </div>
 
-        <p class="about-text">
-            3. Без рекламы.
-            <p class="mini-about">Было бы очень не прилично ставить рекламу в такой проект.</p>
+    <div class="popularFuncs">
+        Функции, на которые стоит обратить внимание:
+    </div>
+
+    <div class="popularFunc offline">
+        <span>Оффлайн.</span>
+        <p>
+            Скачайте музыку во вкладке <span>оффлайн</span> и слушайте её без доступа к сети
         </p>
+        <img src="media/images/Qettery Desktop Offline.png" alt="">
+    </div>
+    
+    <div class="popularFunc share">
+        <span>Share-Система</span>
+        <p>
+            Делитесь музыкой <span class="notavailable">и своими конфигами</span> через <span>URL</span>
+        </p>
+        <img src="media/images/Qettery - share.png" alt="">
+    </div>
 
-        <a href="about.html"><button class="btn about">Подробнее</button></a>
-        <a class="mrgl-30" href="client.html"><button class="btn goit">Скачать клиент!</button></a>
+    <div class="download">
+        <span>Скачайте клиент за пару кликов</span>
+        <a href="https://disk.yandex.ru/d/sFbjgmAopLNCSg" target="_blank"><button class="windows"><i class="fab fa-windows"></i></button></a>
+        <button class="apple notavailable"><i class="fab fa-apple"></i></button>
+        <button class="web notavailable">Web</button>
+
+        <span class="version">
+            Версия на данный момент: <span id="version">v</span>
+        </span>
 
     </div>
 
     <div class="footer">
-        <img src="media/images/qettery.png" alt=""> <span>© David Agaev (darvigdsd), <span id="year">year</span></span>
+        <img src="media/images/qettery.png" alt=""> <span>© <span id="year">year</span></span>
     </div>
 
     <script>
         var year = new Date().getFullYear();
         var year_obj = document.getElementById('year');
         year_obj.innerHTML = year;
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $("#version").load("updates/updates.html");
     </script>
 
 </body>
