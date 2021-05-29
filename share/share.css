@@ -160,31 +160,9 @@
 
 /*  */
 
-.getfull {
-    position: fixed;
-    left: 30px;
-    bottom: 30px;
-    animation: hoba 2s linear;
-}
-
-@keyframes hoba {
-    from {
-        bottom: -50%;
-    }
-    to {
-        bottom: 30px;
-    }
-}
-
 @media (max-width: 800px) {
     .btn.play {
         margin-left: 0;
-    }
-
-    @media (max-width: 700px) {
-        .getfull {
-            visibility: hidden;   
-        } 
     }
 }
 
@@ -195,9 +173,6 @@
         top: 0;
         transform: translate(-50%);
         margin-bottom: 30px;
-    }
-    .getfull {
-        visibility: hidden;
     }
 }
 
