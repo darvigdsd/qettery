@@ -138,7 +138,7 @@ document.body.addEventListener("keydown", function(event) {
 var d = 1;
 
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-if (d) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
     setTimeout(function() {
         // document.getElementById('audiojs_wrapper0').style.display = 'inline-block';
