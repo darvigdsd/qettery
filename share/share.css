@@ -42,7 +42,7 @@
     vertical-align: middle;
 }
 
-.btn.play.j {
+.btn.j {
     display: inline-block;
     margin: 0;
 }
@@ -151,6 +151,9 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 15px;
+}
+.btn.share * {
+    cursor: pointer;
 }
 
 /*  */
