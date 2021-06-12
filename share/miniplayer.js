@@ -138,7 +138,7 @@ document.body.addEventListener("keydown", function(event) {
 var d = 1;
 
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-if (d) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
     setTimeout(function() {
         // document.getElementById('audiojs_wrapper0').style.display = 'inline-block';
@@ -147,7 +147,7 @@ if (d) {
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
         document.getElementById('mobilizehide').style.display = 'none';
-        alert('btts4');
+        alert('btts5');
     }, 20);
 
 }
