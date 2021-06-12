@@ -146,17 +146,8 @@ if (d) {
         // document.querySelector('.btn.play').style.display = 'none';
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
-        audio = document.getElementById('audio');
-        alert('btts1');
-        play.onclick = function () {
-
-            if (audio.paused) {
-                $("#audio").jPlayer("play");
-            } else {
-                $("#audio").jPlayer("pause");
-            }
-                
-        }
+        document.getElementById('mobilizehide').style.display = 'none';
+        alert('btts4');
     }, 20);
 
 }

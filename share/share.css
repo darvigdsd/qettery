@@ -42,6 +42,11 @@
     vertical-align: middle;
 }
 
+.btn.play.j {
+    display: inline-block;
+    margin: 0;
+}
+
 /* mini-player */
 
 /* сам плеер */
