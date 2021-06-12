@@ -46,6 +46,9 @@
     display: inline-block;
     margin: 0;
 }
+#jp_container_1 {
+    display: none;
+}
 
 /* mini-player */
 
