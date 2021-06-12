@@ -143,7 +143,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         // document.querySelector('.btn.play').style.display = 'none';
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
-        audio = document.getElementById('jp_audio0');
+        audio = document.getElementById('jp_audio_0');
+        alert('btts');
     }, 20);
 
     // setInterval(function() {
