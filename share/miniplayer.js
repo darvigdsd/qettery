@@ -147,7 +147,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
         document.getElementById('mobilizehide').style.display = 'none';
-        alert('btts5');
+        alert('btts10');
     }, 20);
 
 }
