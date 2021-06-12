@@ -138,19 +138,18 @@ document.body.addEventListener("keydown", function(event) {
 var d = 1;
 
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-    setTimeout(function() {
-        // document.getElementById('audiojs_wrapper0').style.display = 'inline-block';
-        // document.querySelector('.audiojs .play-pause').style.display = 'inline-block';
-        // document.querySelector('.btn.play').style.display = 'none';
-        document.getElementsByClassName('volume')[0].style.display = 'none';
-        document.querySelector('.btn.share').style.marginLeft = '0';
-        document.getElementById('mobilizehide').style.display = 'none';
-        document.getElementById('jp_container_1').style.display = 'block';
-        alert('btts11');
-    }, 20);
+//     setTimeout(function() {
+//         // document.getElementById('audiojs_wrapper0').style.display = 'inline-block';
+//         // document.querySelector('.audiojs .play-pause').style.display = 'inline-block';
+//         // document.querySelector('.btn.play').style.display = 'none';
+//         document.getElementsByClassName('volume')[0].style.display = 'none';
+//         document.querySelector('.btn.share').style.marginLeft = '0';
+//         document.getElementById('mobilizehide').style.display = 'none';
+//         document.getElementById('jp_container_1').style.display = 'block';
+//     }, 20);
 
-}
+// }
 
 // //
