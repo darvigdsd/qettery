@@ -147,7 +147,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
         document.getElementById('mobilizehide').style.display = 'none';
-        document.getElementById('jp_container_1').style.display = 'inline-block';
+        document.getElementById('jp_container_1').style.display = 'block';
         alert('btts11');
     }, 20);
 
