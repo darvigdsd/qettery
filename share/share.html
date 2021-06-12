@@ -53,11 +53,18 @@
 
     <script src="share.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js" integrity="sha512-n1UxE3D0oAro7q72ZVxyGIUqB3DBt+cYVNujO4yFXm74LVPkzUUgPyP5UGEkDEDAMGLNkDo4BnIMrE/M8b5lCw==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
     <script>
-        audiojs.events.ready(function() {
-          var as = audiojs.createAll();
+    $(document).ready(function() {
+        $("#audio").jPlayer( {
+            ready: function () {
+                $(this).jPlayer("setMedia", {
+                mp3: data.href 
+            });
+            }
         });
+    });
     </script>
 
     <script src="miniplayer.js"></script>
