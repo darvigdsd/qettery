@@ -135,7 +135,10 @@ document.body.addEventListener("keydown", function(event) {
 
 // audiojs
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+var d = 1;
+
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+if (d) {
 
     setTimeout(function() {
         // document.getElementById('audiojs_wrapper0').style.display = 'inline-block';
@@ -143,43 +146,18 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         // document.querySelector('.btn.play').style.display = 'none';
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
-        audio = document.getElementById('jp_audio_0');
-        alert('btts');
+        audio = document.getElementById('audio');
+        alert('btts1');
+        play.onclick = function () {
+
+            if (audio.paused) {
+                $("#audio").jPlayer("play");
+            } else {
+                $("#audio").jPlayer("pause");
+            }
+                
+        }
     }, 20);
-
-    // setInterval(function() {
-
-    //     const audiojsb = document.querySelector('.audiojs .play-pause .play');
-    
-    //     audiojsb.onmouseover = function() {
-    //         document.getElementsByClassName('music')[0].style.background = "#E63757"; document.getElementsByClassName('music')[0].style.boxShadow = "0px 5pt 15pt rgb(193, 19, 60, 0.20)";
-    //     }
-    //     audiojsb.onmouseout = function() {
-    //         document.getElementsByClassName('music')[0].style.background = "#171D60"; document.getElementsByClassName('music')[0].style.boxShadow = "0px 5px 15px rgb(9, 13, 44, 0.20)";
-    //     }
-    
-    // });
-    
-    // setInterval(function() {
-    
-    //     const audiojsb = document.querySelector('.audiojs .play-pause .play');
-    //     const audiojs = document.getElementById('audiojs_wrapper0');
-    
-    //     if (audiojs.classList.contains('playing')) {
-    //         audiojsb.innerHTML = 'пауза';
-    //     } else {
-    //         audiojsb.innerHTML = 'слушать';
-    //     }
-    
-    // }, 10);
-    
-    // setInterval(function() {
-    
-    //     const progress_audiojs = document.querySelector('.audiojs .scrubber .progress');
-    //     let progress_audiojs_x = progress_audiojs.style.width;
-    //     audio.currentTime = progress_audiojs_x.split('px')[0];
-    
-    // }, 10);
 
 }
 
