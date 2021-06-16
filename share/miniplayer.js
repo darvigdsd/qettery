@@ -152,7 +152,7 @@ if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.user
 
 } 
 // /Android/i.test(navigator.userAgent)
-else if (d) {
+else if (/Android/i.test(navigator.userAgent)) {
     alert('Android не поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек. Прогресс устранения этой ошибки: test2');
     setTimeout(function() {
         document.getElementsByClassName('volume')[0].style.display = 'none';
