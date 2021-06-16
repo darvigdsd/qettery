@@ -138,7 +138,7 @@ document.body.addEventListener("keydown", function(event) {
 var d = 1;
 
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
     setTimeout(function() {
         // document.getElementById('audiojs_wrapper0').style.display = 'inline-block';
@@ -150,6 +150,17 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         // document.getElementById('jp_container_1').style.display = 'block';
     }, 20);
 
+} else if (/Android/i.test(navigator.userAgent)) {
+    alert('Android поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек.');
+    setTimeout(function() {
+        document.getElementsByClassName('volume')[0].style.display = 'none';
+        document.querySelector('.btn.share').style.marginLeft = '0';
+        document.getElementById('mobilehide').style.display = 'none';
+        document.getElementById('audio').controls = true;
+        document.getElementsByClassName('musicname')[0].style.display = 'block';
+        document.getElementsByClassName('musicname')[0].style.margin = '0 auto';
+        document.getElementsByClassName('progress')[0].style.display = 'none';
+    }, 20);
 }
 
 // //
