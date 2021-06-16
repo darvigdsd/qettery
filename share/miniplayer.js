@@ -150,13 +150,17 @@ if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.user
         // document.getElementById('jp_container_1').style.display = 'block';
     }, 20);
 
-} else if (/Android/i.test(navigator.userAgent)) {
-    alert('Android не поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек.');
+} 
+// /Android/i.test(navigator.userAgent)
+else if (d) {
+    alert('Android не поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек. Прогресс устранения этой ошибки: test2');
     setTimeout(function() {
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
         document.getElementById('mobilehide').style.display = 'none';
-        document.getElementById('audio').controls = true;
+        audiojs.events.ready(function() {
+            var as = audiojs.createAll();
+        });
         document.getElementsByClassName('musicname')[0].style.display = 'block';
         document.getElementsByClassName('musicname')[0].style.margin = '0 auto';
         document.getElementsByClassName('progress')[0].style.display = 'none';
