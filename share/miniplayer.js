@@ -151,7 +151,7 @@ if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.user
     }, 20);
 
 } else if (/Android/i.test(navigator.userAgent)) {
-    alert('Android поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек.');
+    alert('Android не поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек.');
     setTimeout(function() {
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
