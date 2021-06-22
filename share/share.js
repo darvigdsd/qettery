@@ -29,6 +29,7 @@ document.title = `Qettery: ${data.author} - ${data.name}`;
 document.getElementById('author').innerText = data.author;
 document.getElementById('musicname').innerText = data.name;
 audio.src = data.href;
+document.getElementById('audioForAndroid').src = data.href;
 
 document.getElementById('share').onclick = function copyShareUrl() {
 

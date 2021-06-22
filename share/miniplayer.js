@@ -153,16 +153,11 @@ if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.user
 } 
 // /Android/i.test(navigator.userAgent)
 else if (/Android/i.test(navigator.userAgent)) {
-    alert('Android не поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек. Прогресс устранения этой ошибки: test2');
+    alert('Android не поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек. Прогресс устранения этой ошибки: test3');
+    audio = document.getElementById('audioForAndroid');
     setTimeout(function() {
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
-        document.getElementById('mobilehide').style.display = 'none';
-        audiojs.events.ready(function() {
-            var as = audiojs.createAll();
-        });
-        document.getElementsByClassName('musicname')[0].style.display = 'block';
-        document.getElementsByClassName('musicname')[0].style.margin = '0 auto';
         document.getElementsByClassName('progress')[0].style.display = 'none';
     }, 20);
 }
