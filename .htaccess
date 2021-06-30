@@ -1,3 +1,2 @@
 
-RewriteBase /
-RewriteRule ^track/$ http://ruv.hotmo.org/get/music/ [R=301,L]
+Redirect 301 /track/20200117/MORGENSHTERN_Vitya_AK_-_RATATATATA_68022799.mp3 http://ruv.hotmo.org/get/music/20200117/MORGENSHTERN_Vitya_AK_-_RATATATATA_68022799.mp3
