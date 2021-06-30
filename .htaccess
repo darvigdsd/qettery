@@ -1,0 +1,3 @@
+
+RewriteBase /
+RewriteRule ^track/(.*)$ http://ruv.hotmo.org/get/music/$1 [L,R=301]
