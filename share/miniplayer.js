@@ -133,6 +133,22 @@ document.body.addEventListener("keydown", function(event) {
 		event.preventDefault();
 });
 
+// myStream
+
+console.log(new URL(audio.src).hostname);
+
+if (new URL(audio.src).hostname == 'ruv.hotmo.org') {
+    if (new URL(audio.src).protocol == 'https:') {
+        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
+    } else {
+        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+    }    
+}
+
+// //
+
 // audiojs
 
 var d = 1;
@@ -152,7 +168,7 @@ if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.user
 
 } 
 // /Android/i.test(navigator.userAgent)
-else if (/Android/i.test(navigator.userAgent)) {
+else if (d) {
     alert('Android не поддерживает плеер Qettery, поэтому возможно вы не сможете проиграть трек. Прогресс устранения этой ошибки: test3');
     audio = document.getElementById('audioForAndroid');
     setTimeout(function() {
@@ -160,22 +176,6 @@ else if (/Android/i.test(navigator.userAgent)) {
         document.querySelector('.btn.share').style.marginLeft = '0';
         document.getElementsByClassName('progress')[0].style.display = 'none';
     }, 20);
-}
-
-// //
-
-// myStream
-
-console.log(new URL(audio.src).hostname);
-
-if (new URL(audio.src).hostname == 'ruv.hotmo.org') {
-    if (new URL(audio.src).protocol == 'https:') {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
-    } else {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-    }    
 }
 
 // //
