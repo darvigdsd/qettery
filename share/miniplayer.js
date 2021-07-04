@@ -135,8 +135,6 @@ document.body.addEventListener("keydown", function(event) {
 
 // myStream
 
-console.log(new URL(audio.src).hostname);
-
 if (new URL(audio.src).hostname == 'hotmo.org') {
     if (new URL(audio.src).protocol == 'https:') {
         audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://hotmo.org/get/music/', '')}`;

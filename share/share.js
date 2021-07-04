@@ -10,10 +10,7 @@ function b64_to_utf8(str) {
 function getUrl() {
 
     var url = window.location.search;
-    console.log(url);
     var urlVar = new URL(`https://darvigdsd.github.io/qettery/share/share${b64_to_utf8(url.slice(1))}`);
-
-    console.log(urlVar);
 
     data.name = urlVar.searchParams.get('name');
     data.author = urlVar.searchParams.get('author');
