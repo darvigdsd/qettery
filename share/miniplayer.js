@@ -135,15 +135,32 @@ document.body.addEventListener("keydown", function(event) {
 
 // myStream
 
+function UrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+
 console.log(new URL(audio.src).hostname);
 
 if (new URL(audio.src).hostname == 'ruv.hotmo.org') {
     if (new URL(audio.src).protocol == 'https:') {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
+        if (UrlExists(`https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`)) {
+            audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
+            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;   
+        } else {
+            audio.src = `https://qettery.herokuapp.com/track/ds/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
+            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/ds/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
+        }
     } else {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+        if (UrlExists(`https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`)) {
+            audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+        } else {
+            audio.src = `https://qettery.herokuapp.com/track/ds/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/ds/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+        }
     }    
 }
 
