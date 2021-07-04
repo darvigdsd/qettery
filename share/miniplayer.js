@@ -135,32 +135,25 @@ document.body.addEventListener("keydown", function(event) {
 
 // myStream
 
-function UrlExists(url) {
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    return http.status!=404;
-}
-
 console.log(new URL(audio.src).hostname);
+
+if (new URL(audio.src).hostname == 'hotmo.org') {
+    if (new URL(audio.src).protocol == 'https:') {
+        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://hotmo.org/get/music/', '')}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://hotmo.org/get/music/', '')}`; 
+    } else {
+        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://hotmo.org/get/music/', '')}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://hotmo.org/get/music/', '')}`;
+    }   
+}
 
 if (new URL(audio.src).hostname == 'ruv.hotmo.org') {
     if (new URL(audio.src).protocol == 'https:') {
-        if (UrlExists(`https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`)) {
-            audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
-            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;   
-        } else {
-            audio.src = `https://qettery.herokuapp.com/track/ds/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
-            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/ds/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
-        }
+        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`; 
     } else {
-        if (UrlExists(`https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`)) {
-            audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-        } else {
-            audio.src = `https://qettery.herokuapp.com/track/ds/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/ds/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-        }
+        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
     }    
 }
 
@@ -192,6 +185,21 @@ else if (/Android/i.test(navigator.userAgent)) {
         document.querySelector('.btn.share').style.marginLeft = '0';
         document.getElementsByClassName('progress')[0].style.display = 'none';
     }, 20);
+}
+
+// //
+
+// reloadLink
+
+function reloadLink() {
+    console.log(new URL(audio.src).pathname);
+    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
+        audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
+    } else {
+        audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
+    }
 }
 
 // //

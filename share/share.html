@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="share.css">
     
     <script src="https://darvigdsd.github.io/media/fontawesome/js/all.js"></script>
-
 </head>
 <body>
-    
+
     <div class="head">
         <img src="../media/images/qettery.png" alt="">
     </div>
@@ -28,8 +27,8 @@
                 слушать
             </button>
 
-            <audio loop id="audio" src="" type="audio/mpeg"></audio>
-            <video style="display: none;" loop id="audioForAndroid" src="" type="audio/mpeg"></video>
+            <audio preload="metadata" onerror="reloadLink()" loop id="audio" src="" type="audio/mpeg"></audio>
+            <video preload="metadata" onerror="reloadLink()" style="display: none;" loop id="audioForAndroid" src="" type="audio/mpeg"></video>
 
         </div>
 
@@ -53,22 +52,6 @@
     </div>
 
     <script src="share.js"></script>
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $("#jquery_jplayer_1").jPlayer( {
-            ready: function () {
-                $(this).jPlayer("setMedia", {
-                mp3: data.href 
-            });
-            }
-        });
-    });
-    </script> -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/audiojs/1.0.1/audio.min.js"></script>
     <script src="miniplayer.js"></script>
 
 </body>
