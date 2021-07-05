@@ -180,6 +180,7 @@ document.getElementById('audioForAndroid').addEventListener("error", function() 
             document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
         }
     } else {
+        alert('ok');
         document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
     }
 });
