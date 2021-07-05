@@ -155,6 +155,36 @@ if (new URL(audio.src).hostname == 'ruv.hotmo.org') {
     }    
 }
 
+// reloadLink
+
+audio.addEventListener("error", function() {
+    console.log(new URL(audio.src).pathname);
+    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
+        if(new URL(audio.src).pathname.split('/').indexOf('s2') != -1) {
+
+        } else {
+            audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
+        }
+    } else {
+        audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
+    }
+});
+
+document.getElementById('audioForAndroid').addEventListener("error", function() {
+    console.log(new URL(audio.src).pathname);
+    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
+        if(new URL(audio.src).pathname.split('/').indexOf('s2') != -1) {
+
+        } else {
+            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
+        }
+    } else {
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
+    }
+});
+
+// //
+
 // //
 
 // audiojs
@@ -165,13 +195,8 @@ var d = 1;
 if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
     setTimeout(function() {
-        // document.getElementById('audiojs_wrapper0').style.display = 'inline-block';
-        // document.querySelector('.audiojs .play-pause').style.display = 'inline-block';
-        // document.querySelector('.btn.play').style.display = 'none';
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
-        // document.getElementById('mobilizehide').style.display = 'none';
-        // document.getElementById('jp_container_1').style.display = 'block';
     }, 20);
 
 } 
@@ -181,34 +206,7 @@ else if (/Android/i.test(navigator.userAgent)) {
     setTimeout(function() {
         document.getElementsByClassName('volume')[0].style.display = 'none';
         document.querySelector('.btn.share').style.marginLeft = '0';
-        document.getElementsByClassName('progress')[0].style.display = 'none';
     }, 20);
 }
-
-// //
-
-// reloadLink
-
-audio.addEventListener("error", function() {
-    console.log(new URL(audio.src).pathname);
-    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
-        audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-    } else {
-        audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-    }
-});
-
-document.getElementById('audioForAndroid').addEventListener("error", function() {
-    console.log(new URL(audio.src).pathname);
-    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
-        audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-    } else {
-        audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-    }
-});
 
 // //
