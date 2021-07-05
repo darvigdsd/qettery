@@ -189,7 +189,7 @@ else if (/Android/i.test(navigator.userAgent)) {
 
 // reloadLink
 
-function reloadLink() {
+audio.addEventListener("error", function() {
     console.log(new URL(audio.src).pathname);
     if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
         audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
@@ -198,6 +198,17 @@ function reloadLink() {
         audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
         document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
     }
-}
+});
+
+document.getElementById('audioForAndroid').addEventListener("error", function() {
+    console.log(new URL(audio.src).pathname);
+    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
+        audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
+    } else {
+        audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
+        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
+    }
+});
 
 // //
