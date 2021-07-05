@@ -176,6 +176,7 @@ document.getElementById('audioForAndroid').addEventListener("error", function() 
         if(new URL(audio.src).pathname.split('/').indexOf('s2') != -1) {
 
         } else {
+            alert('ok2');
             document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
         }
     } else {
