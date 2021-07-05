@@ -189,11 +189,9 @@ document.getElementById('audioForAndroid').addEventListener("error", function() 
         if(new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('s2') != -1) {
 
         } else {
-            alert('ok2');
             document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
         }
     } else {
-        alert('ok');
         document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
     }
 });
@@ -204,11 +202,9 @@ document.getElementById('audioForAndroid').addEventListener("stalled", function(
         if(new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('s2') != -1) {
 
         } else {
-            alert('ok2');
             document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
         }
     } else {
-        alert('ok');
         document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
     }
 });
