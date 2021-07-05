@@ -185,8 +185,8 @@ audio.addEventListener("stalled", function() {
 
 document.getElementById('audioForAndroid').addEventListener("error", function() {
     console.log(new URL(audio.src).pathname);
-    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
-        if(new URL(audio.src).pathname.split('/').indexOf('s2') != -1) {
+    if (new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('ds') != -1) {
+        if(new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('s2') != -1) {
 
         } else {
             alert('ok2');
@@ -200,8 +200,8 @@ document.getElementById('audioForAndroid').addEventListener("error", function() 
 
 document.getElementById('audioForAndroid').addEventListener("stalled", function() {
     console.log(new URL(audio.src).pathname);
-    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
-        if(new URL(audio.src).pathname.split('/').indexOf('s2') != -1) {
+    if (new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('ds') != -1) {
+        if(new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('s2') != -1) {
 
         } else {
             alert('ok2');
