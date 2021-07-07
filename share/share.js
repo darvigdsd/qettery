@@ -27,7 +27,10 @@ xhr.onload = function() {
 }
 xhr.send(null);
 
+console.log(`https://qettery.herokuapp.com/api/streamred.php?id=${id}&code=${new URL(gdata).searchParams.get('code')}&expires=${new URL(gdata).searchParams.get('expires')}&cdn=${new URL(gdata).hostname.split('.')[0]}`);
+
 audio.src = gdata;
+document.getElementById('audioForAndroid').src = gdata;
 
 let gdatat = [];
 
