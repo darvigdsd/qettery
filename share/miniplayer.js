@@ -157,57 +157,7 @@ if (new URL(audio.src).hostname == 'ruv.hotmo.org') {
 
 // reloadLink
 
-audio.addEventListener("error", function() {
-    console.log(new URL(audio.src).pathname);
-    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
-        if(new URL(audio.src).pathname.split('/').indexOf('s2') != -1) {
 
-        } else {
-            audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
-        }
-    } else {
-        audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
-    }
-});
-
-audio.addEventListener("stalled", function() {
-    console.log(new URL(audio.src).pathname);
-    if (new URL(audio.src).pathname.split('/').indexOf('ds') != -1) {
-        if(new URL(audio.src).pathname.split('/').indexOf('s2') != -1) {
-
-        } else {
-            audio.src = `https://qettery.herokuapp.com/s2${new URL(audio.src).pathname}`;
-        }
-    } else {
-        audio.src = `https://qettery.herokuapp.com/ds${new URL(audio.src).pathname}`;
-    }
-});
-
-document.getElementById('audioForAndroid').addEventListener("error", function() {
-    console.log(new URL(audio.src).pathname);
-    if (new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('ds') != -1) {
-        if(new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('s2') != -1) {
-
-        } else {
-            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-        }
-    } else {
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-    }
-});
-
-document.getElementById('audioForAndroid').addEventListener("stalled", function() {
-    console.log(new URL(audio.src).pathname);
-    if (new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('ds') != -1) {
-        if(new URL(document.getElementById('audioForAndroid').src).pathname.split('/').indexOf('s2') != -1) {
-
-        } else {
-            document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/s2${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-        }
-    } else {
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/ds${new URL(document.getElementById('audioForAndroid').src).pathname}`;
-    }
-});
 
 // //
 

@@ -1,32 +1,53 @@
 
-var data = [];
-
-function b64_to_utf8(str) {
-
-	return decodeURIComponent(escape(window.atob(str)));
-
-}
+let id = 0;
 
 function getUrl() {
 
-    var url = window.location.search;
-    var urlVar = new URL(`https://darvigdsd.github.io/qettery/share/share${b64_to_utf8(url.slice(1))}`);
-
-    data.name = urlVar.searchParams.get('name');
-    data.author = urlVar.searchParams.get('author');
-    data.href = urlVar.searchParams.get('href');
-
-    return data;
+    var url = new URL(window.location);
+    id = url.searchParams.get('id');
 
 }
 
 getUrl();
 
-document.title = `Qettery: ${data.author} - ${data.name}`;
-document.getElementById('author').innerText = data.author;
-document.getElementById('musicname').innerText = data.name;
-audio.src = data.href;
-document.getElementById('audioForAndroid').src = data.href;
+// document.title = `Qettery: ${data.author} - ${data.name}`;
+// document.getElementById('author').innerText = data.author;
+// document.getElementById('musicname').innerText = data.name;
+// audio.src = data.href;
+// document.getElementById('audioForAndroid').src = data.href;
+
+let gdata = [];
+var xhr = new XMLHttpRequest(), data;
+xhr.open('get', `https://qettery.herokuapp.com/api/stream.php?id=${id}&quality=high`, false);
+xhr.onload = function() {
+    if (xhr.readyState == 4 && (~~(xhr.status / 100)) == 2) {
+        data = JSON.parse(xhr.responseText);
+        gdata = JSON.parse(xhr.responseText).result.stream;
+    }
+}
+xhr.send(null);
+
+audio.src = gdata;
+
+let gdatat = [];
+
+var xhrTrack = new XMLHttpRequest(), datat;
+xhrTrack.open('get', `https://qettery.herokuapp.com/api/tracks.php?ids=${id}`, false);
+xhrTrack.onload = function() {
+    document.getElementsByClassName('loader')[0].classList.add('loaded');
+    if (xhrTrack.readyState == 4 && (~~(xhrTrack.status / 100)) == 2) {
+        datat = JSON.parse(xhrTrack.responseText);
+        console.log(datat.result.tracks[id]);
+        gdatat = JSON.parse(xhrTrack.responseText).result.tracks[id];
+    }
+}
+xhrTrack.send(null);
+
+document.getElementById('author').innerHTML = gdatat.credits.replace('`', "'");
+document.getElementById('musicname').innerHTML = gdatat.title.replace('`', "'");
+let previewTrack = new URL(gdatat.image.src);
+previewTrack.searchParams.set('size', '250x250');
+document.getElementById('preview').src = previewTrack;
 
 document.getElementById('share').onclick = function copyShareUrl() {
 
@@ -48,3 +69,7 @@ document.getElementById('share').onclick = function copyShareUrl() {
     }, 1000);
 
 }
+
+document.getElementById('preview').addEventListener('error', function() {
+    document.getElementById('preview').style.display = 'none';
+});
