@@ -52,6 +52,8 @@ let previewTrack = new URL(gdatat.image.src);
 previewTrack.searchParams.set('size', '250x250');
 document.getElementById('preview').src = previewTrack;
 
+document.title = `Qettery: ${gdatat.credits.replace('`', "'")} - ${gdatat.title.replace('`', "'")}`;
+
 document.getElementById('share').onclick = function copyShareUrl() {
 
     var url = document.createElement('input'),
