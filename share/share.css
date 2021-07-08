@@ -87,7 +87,7 @@
 .progress .time {
     width: 0%;
     height: 3px;
-    background: #ACD652;
+    background: #FF6B84;
     border-radius: 10px;
 }
 
@@ -102,8 +102,12 @@
     width: 175px;
     height: auto;
     display: inline-block;
+    overflow-y: hidden;
     overflow-x: hidden;
     white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 /*  */
@@ -123,17 +127,23 @@
     background: white;
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
+}
+.player .btn.control * {
+    cursor: pointer;
 }
 
 .btn.control #volume {
     display: inline-block;
     font-size: 20px;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .btn.control .icon {
     display: inline-block;
     font-size: 20px;
+    cursor: pointer;
 }
 
 /*  */
@@ -142,10 +152,10 @@
 
 .btn.share {
     padding: 5pt 7pt;
-    background: #52F2B1;
+    background: #4E75FF;
     font-size: 10pt;
     color: white;
-    box-shadow: 0px 3px 6px rgba(82, 242, 177, 0.16);
+    box-shadow: 0px 3px 6px rgba(78, 117, 255, 0.16);
     border-radius: 20pt;
     text-align: center;
     display: inline-block;
@@ -165,6 +175,9 @@
     height: auto;
     text-align: center;
     margin-top: 10px;
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
 }
 
 /*  */

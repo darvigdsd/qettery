@@ -40,11 +40,8 @@ const progress = document.getElementsByClassName('progress')[0];
 
 let audioPlay = setInterval(function() {
     
-    // Получаем значение на какой секунде песня
     let audioTime = Math.round(audio.currentTime);
-    // Получаем всё время песни
     let audioLength = Math.round(audio.duration)
-    // Назначаем ширину элементу time
     time.style.width = (audioTime * 100) / audioLength + '%';
 
 }, 10);
@@ -105,7 +102,7 @@ volume.onclick = function() {
 document.addEventListener("keydown", function(event) {
     if (event.keyCode === 38) {
         if (audio.volume !== 1) {
-            audio.volume = audio.volume + 0.02;
+            audio.volume = audio.volume + 0.01;
         }
         else if (audio.volume > 1) {
             audio.volume = 1;
@@ -116,7 +113,7 @@ document.addEventListener("keydown", function(event) {
 document.addEventListener("keydown", function(event) {
     if (event.keyCode === 40) {
         if (audio.volume !== 0.01) {
-            audio.volume = audio.volume - 0.02;
+            audio.volume = audio.volume - 0.01;
         } 
         else if (audio.volume == 0.01) {
 
@@ -133,41 +130,8 @@ document.body.addEventListener("keydown", function(event) {
 		event.preventDefault();
 });
 
-// myStream
+// android audio
 
-if (new URL(audio.src).hostname == 'hotmo.org') {
-    if (new URL(audio.src).protocol == 'https:') {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://hotmo.org/get/music/', '')}`; 
-    } else {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://hotmo.org/get/music/', '')}`;
-    }   
-}
-
-if (new URL(audio.src).hostname == 'ruv.hotmo.org') {
-    if (new URL(audio.src).protocol == 'https:') {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${audio.src.replace('https://ruv.hotmo.org/get/music/', '')}`; 
-    } else {
-        audio.src = `https://qettery.herokuapp.com/track/${audio.src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-        document.getElementById('audioForAndroid').src = `https://qettery.herokuapp.com/track/${document.getElementById('audioForAndroid').src.replace('http://ruv.hotmo.org/get/music/', '')}`;
-    }    
-}
-
-// reloadLink
-
-
-
-// //
-
-// //
-
-// audiojs
-
-var d = 1;
-
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
     setTimeout(function() {
@@ -176,7 +140,7 @@ if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.user
     }, 20);
 
 } 
-// /Android/i.test(navigator.userAgent)
+
 else if (/Android/i.test(navigator.userAgent)) {
     audio = document.getElementById('audioForAndroid');
     setTimeout(function() {

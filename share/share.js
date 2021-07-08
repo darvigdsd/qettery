@@ -10,12 +10,6 @@ function getUrl() {
 
 getUrl();
 
-// document.title = `Qettery: ${data.author} - ${data.name}`;
-// document.getElementById('author').innerText = data.author;
-// document.getElementById('musicname').innerText = data.name;
-// audio.src = data.href;
-// document.getElementById('audioForAndroid').src = data.href;
-
 let gdata = [];
 var xhr = new XMLHttpRequest(), data;
 xhr.open('get', `https://qettery.herokuapp.com/api/stream.php?id=${id}&quality=high`, false);
@@ -65,12 +59,12 @@ document.getElementById('share').onclick = function copyShareUrl() {
     document.execCommand('copy');
     document.body.removeChild(url);
 
-    this.style.background = '#E63757';
-    this.style.boxShadow = '0px 3px 6px rgba(193, 19, 60, 0.16)';
+    this.style.background = 'white';
+    this.style.color = "#4E75FF";
 
     setTimeout(function() {
-        document.getElementById('share').style.background = '#52F2B1';
-        document.getElementById('share').style.boxShadow = '0px 3px 6px rgba(82, 242, 177, 0.16)';  
+        document.getElementById('share').style.background = '#4E75FF';  
+        document.getElementById('share').style.color = 'white';
     }, 1000);
 
 }
